@@ -1,0 +1,3 @@
+function SpawnPoints()
+return {}
+end
