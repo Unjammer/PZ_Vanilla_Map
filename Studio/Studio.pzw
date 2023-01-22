@@ -1,229 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <world version="1.0" width="2" height="1">
- <BMPToTMX>
-  <tmxexportdir path="tmx"/>
-  <rulesfile path=""/>
-  <blendsfile path=""/>
-  <mapbasefile path=""/>
-  <assign-maps-to-world checked="false"/>
-  <warn-unknown-colors checked="true"/>
-  <compress checked="true"/>
-  <copy-pixels checked="true"/>
-  <update-existing checked="true"/>
- </BMPToTMX>
- <TMXToBMP>
-  <mainImage generate="true"/>
-  <vegetationImage generate="true"/>
-  <buildingsImage path="" generate="false"/>
- </TMXToBMP>
- <GenerateLots>
-  <exportdir path="lots"/>
-  <ZombieSpawnMap path="Map_ZombieSpawnMap.png"/>
-  <TileDefFolder path="../../Tiles"/>
-  <worldOrigin origin="0,0"/>
- </GenerateLots>
- <LuaSettings>
-  <spawnPointsFile path="spawnpoints.lua"/>
-  <worldObjectsFile path="objects.lua"/>
- </LuaSettings>
- <bmp path="Map.png" x="0" y="0" width="2" height="1"/>
- <propertyenum name="Direction" choices="N,S,W,E" multi="false"/>
- <propertyenum name="Pose" choices="pose01,pose02,pose03" multi="false"/>
- <propertyenum name="Skin" choices="White,Black" multi="false"/>
- <propertyenum name="Professions" choices="unemployed,chef,constructionworker,doctor,fireofficer,parkranger,policeofficer,repairman,securityguard" multi="false"/>
- <propertyenum name="RoomTone" choices="Generic,Barn,Mall,Warehouse,Prison,Church,Office,Factory" multi="false"/>
- <propertydef name="Direction" default="N" enum="Direction"/>
- <propertydef name="FaceDirection" default="true"/>
- <propertydef name="WaterDirection" default="0.0"/>
- <propertydef name="WaterSpeed" default="0.0"/>
- <propertydef name="WaterGround" default="false"/>
- <propertydef name="WaterShore" default="true"/>
- <propertydef name="Female" default="true"/>
- <propertydef name="Pose" default="pose01" enum="Pose"/>
- <propertydef name="Skin" default="White" enum="Skin"/>
- <propertydef name="Professions" default="all" enum="Professions"/>
- <propertydef name="Outfit" default=""/>
- <propertydef name="Script" default=""/>
- <propertydef name="RoomTone" default="Generic" enum="RoomTone"/>
- <propertydef name="EntireBuilding" default="false"/>
- <template name="ParkingStallN">
-  <property name="Direction" value="N"/>
- </template>
- <template name="ParkingStallS">
-  <property name="Direction" value="S"/>
- </template>
- <template name="ParkingStallW">
-  <property name="Direction" value="W"/>
- </template>
- <template name="ParkingStallE">
-  <property name="Direction" value="E"/>
- </template>
- <template name="WaterFlowN">
-  <property name="WaterDirection" value="0"/>
-  <property name="WaterSpeed" value="1.0"/>
- </template>
- <template name="WaterFlowS">
-  <property name="WaterDirection" value="180"/>
-  <property name="WaterSpeed" value="1.0"/>
- </template>
- <template name="WaterFlowE">
-  <property name="WaterDirection" value="90"/>
-  <property name="WaterSpeed" value="1.0"/>
- </template>
- <template name="WaterFlowW">
-  <property name="WaterDirection" value="270"/>
-  <property name="WaterSpeed" value="1.0"/>
- </template>
- <template name="WaterZone">
-  <property name="WaterGround" value="false"/>
-  <property name="WaterShore" value="true"/>
- </template>
- <template name="SpawnPoint">
-  <property name="Professions" value="all"/>
- </template>
- <template name="RoomTone">
-  <property name="RoomTone" value="Generic"/>
-  <property name="EntireBuilding" value="false"/>
- </template>
- <objecttype name="TownZone"/>
- <objecttype name="Forest"/>
- <objecttype name="DeepForest"/>
- <objecttype name="Nav"/>
- <objecttype name="Vegitation"/>
- <objecttype name="TrailerPark"/>
- <objecttype name="Farm"/>
- <objecttype name="ParkingStall"/>
- <objecttype name="FarmLand"/>
- <objecttype name="WaterFlow"/>
- <objecttype name="WaterZone"/>
- <objecttype name="Mannequin"/>
- <objecttype name="Ranch"/>
- <objecttype name="ZombiesType"/>
- <objecttype name="LootZone"/>
- <objecttype name="ZoneStory"/>
- <objecttype name="SpawnPoint"/>
- <objecttype name="RoomTone"/>
- <objectgroup name="ParkingStall" color="#ff007f" defaulttype="ParkingStall"/>
- <objectgroup name="TownZone" color="#aa0000" defaulttype="TownZone"/>
- <objectgroup name="Forest" color="#00aa00" defaulttype="Forest"/>
- <objectgroup name="Nav" color="#55aaff" defaulttype="Nav"/>
- <objectgroup name="DeepForest" color="#003500" defaulttype="DeepForest"/>
- <objectgroup name="Vegitation" color="#b3b300" defaulttype="Vegitation"/>
- <objectgroup name="TrailerPark" color="#f50000" defaulttype="TrailerPark"/>
- <objectgroup name="Farm" color="#55ff7f" defaulttype="Farm"/>
- <objectgroup name="FarmLand" color="#bcff7d" defaulttype="FarmLand"/>
- <objectgroup name="WaterFlow" color="#0000ff" defaulttype="WaterFlow"/>
- <objectgroup name="WaterZone" color="#0000ff" defaulttype="WaterZone"/>
- <objectgroup name="Mannequin" color="#0000ff" defaulttype="Mannequin"/>
- <objectgroup name="Ranch" color="#ff8000" defaulttype="Ranch"/>
- <objectgroup name="ZombiesType" color="#ffffff" defaulttype="ZombiesType"/>
- <objectgroup name="LootZone" color="#80ff80" defaulttype="LootZone"/>
- <objectgroup name="ZoneStory" color="#8080ff" defaulttype="ZoneStory"/>
- <objectgroup name="SpawnPoint" color="#101010" defaulttype="SpawnPoint"/>
- <objectgroup name="RoomTone" color="#0000ff" defaulttype="RoomTone"/>
- <cell x="0" y="0" map="tmx/1_1.tmx">
-  <object group="Forest" type="Forest" x="0" y="270" level="0" width="300" height="30"/>
-  <object group="Forest" type="Forest" x="0" y="219" level="0" width="86" height="29"/>
-  <object group="Forest" type="Forest" x="0" y="0" level="0" width="89" height="219"/>
-  <object group="Forest" type="Forest" x="89" y="0" level="0" width="9" height="79"/>
-  <object group="Forest" type="Forest" x="98" y="0" level="0" width="186" height="25"/>
-  <object group="Forest" type="Forest" x="284" y="0" level="0" width="16" height="17"/>
-  <object group="Forest" type="Forest" x="192" y="235" level="0" width="2" height="5"/>
-  <object group="Forest" type="Forest" x="190" y="231" level="0" width="2" height="9"/>
-  <object group="Forest" type="Forest" x="188" y="228" level="0" width="2" height="12"/>
-  <object group="Forest" type="Forest" x="144" y="216" level="0" width="44" height="26"/>
-  <object group="Forest" type="Forest" x="91" y="216" level="0" width="35" height="27"/>
-  <object group="Forest" type="Forest" x="91" y="184" level="0" width="4" height="32"/>
-  <object group="Forest" type="Forest" x="118" y="182" level="0" width="6" height="3"/>
-  <object group="Forest" type="Forest" x="91" y="180" level="0" width="27" height="4"/>
-  <object group="Forest" type="Forest" x="92" y="152" level="0" width="10" height="28"/>
-  <object group="Forest" type="Forest" x="102" y="178" level="0" width="7" height="2"/>
-  <object group="Forest" type="Forest" x="102" y="176" level="0" width="2" height="2"/>
-  <object group="Forest" type="Forest" x="102" y="170" level="0" width="3" height="3"/>
-  <object group="Forest" type="Forest" x="110" y="173" level="0" width="4" height="4"/>
-  <object group="Forest" type="Forest" x="102" y="153" level="0" width="5" height="6"/>
-  <object group="Forest" type="Forest" x="107" y="154" level="0" width="4" height="6"/>
-  <object group="Forest" type="Forest" x="111" y="155" level="0" width="3" height="4"/>
-  <object group="Forest" type="Forest" x="114" y="156" level="0" width="5" height="4"/>
-  <object group="Forest" type="Forest" x="119" y="157" level="0" width="1" height="3"/>
-  <object group="Forest" type="Forest" x="94" y="137" level="0" width="2" height="15"/>
-  <object group="Forest" type="Forest" x="96" y="147" level="0" width="2" height="5"/>
-  <object group="Forest" type="Forest" x="98" y="149" level="0" width="2" height="3"/>
-  <object group="Forest" type="Forest" x="91" y="120" level="0" width="5" height="2"/>
-  <object group="Forest" type="Forest" x="93" y="115" level="0" width="3" height="5"/>
-  <object group="Forest" type="Forest" x="92" y="81" level="0" width="4" height="34"/>
-  <object group="Forest" type="Forest" x="91" y="81" level="0" width="1" height="22"/>
-  <object group="Forest" type="Forest" x="168" y="28" level="0" width="2" height="18"/>
-  <object group="Forest" type="Forest" x="170" y="171" level="0" width="7" height="25"/>
-  <object group="Vegitation" type="Vegitation" x="102" y="160" level="0" width="2" height="5"/>
-  <object group="Vegitation" type="Vegitation" x="108" y="172" level="0" width="5" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="109" y="173" level="0" width="1" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="114" y="175" level="0" width="1" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="120" y="155" level="0" width="7" height="4"/>
-  <object group="Vegitation" type="Vegitation" x="111" y="153" level="0" width="3" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="109" y="153" level="0" width="2" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="109" y="151" level="0" width="4" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="167" y="96" level="0" width="4" height="47"/>
-  <object group="Vegitation" type="Vegitation" x="171" y="95" level="0" width="4" height="6"/>
-  <object group="Vegitation" type="Vegitation" x="175" y="95" level="0" width="3" height="4"/>
-  <object group="Vegitation" type="Vegitation" x="172" y="154" level="0" width="7" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="172" y="145" level="0" width="2" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="204" y="135" level="0" width="53" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="255" y="114" level="0" width="2" height="21"/>
-  <object group="Vegitation" type="Vegitation" x="213" y="114" level="0" width="3" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="178" y="95" level="0" width="20" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="244" y="30" level="0" width="4" height="15"/>
-  <object group="Vegitation" type="Vegitation" x="249" y="28" level="0" width="5" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="241" y="28" level="0" width="4" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="243" y="30" level="0" width="1" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="259" y="28" level="0" width="13" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="285" y="28" level="0" width="15" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="299" y="31" level="0" width="1" height="10"/>
-  <object group="Vegitation" type="Vegitation" x="296" y="232" level="0" width="5" height="11"/>
-  <object group="Vegitation" type="Vegitation" x="298" y="229" level="0" width="3" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="163" y="190" level="0" width="7" height="6"/>
-  <object group="Vegitation" type="Vegitation" x="173" y="161" level="0" width="5" height="10"/>
-  <object group="Vegitation" type="Vegitation" x="178" y="160" level="0" width="19" height="6"/>
-  <object group="Vegitation" type="Vegitation" x="284" y="17" level="0" width="16" height="3"/>
-  <object group="TownZone" type="TownZone" x="284" y="64" level="0" width="14" height="17"/>
-  <object group="TownZone" type="TownZone" x="250" y="33" level="0" width="48" height="13"/>
-  <object group="TownZone" type="TownZone" x="219" y="56" level="0" width="56" height="26"/>
-  <object group="TownZone" type="TownZone" x="174" y="32" level="0" width="65" height="13"/>
-  <object group="TownZone" type="TownZone" x="200" y="64" level="0" width="16" height="16"/>
-  <object group="TownZone" type="TownZone" x="169" y="57" level="0" width="31" height="23"/>
-  <object group="TownZone" type="TownZone" x="203" y="92" level="0" width="56" height="15"/>
-  <object group="TownZone" type="TownZone" x="228" y="151" level="0" width="31" height="15"/>
-  <object group="TownZone" type="TownZone" x="244" y="167" level="0" width="15" height="31"/>
-  <object group="TownZone" type="TownZone" x="227" y="167" level="0" width="15" height="31"/>
-  <object group="TownZone" type="TownZone" x="210" y="167" level="0" width="15" height="31"/>
-  <object group="TownZone" type="TownZone" x="228" y="227" level="0" width="66" height="18"/>
-  <object group="TownZone" type="TownZone" x="228" y="224" level="0" width="9" height="3"/>
-  <object group="TownZone" type="TownZone" x="141" y="179" level="0" width="25" height="9"/>
-  <object group="TownZone" type="TownZone" x="141" y="161" level="0" width="17" height="18"/>
-  <object group="TownZone" type="TownZone" x="158" y="161" level="0" width="3" height="6"/>
-  <object group="TownZone" type="TownZone" x="133" y="243" level="0" width="2" height="4"/>
-  <object group="TrailerPark" type="TrailerPark" x="242" y="118" level="0" width="4" height="13"/>
-  <object group="TrailerPark" type="TrailerPark" x="227" y="118" level="0" width="4" height="13"/>
-  <object group="TrailerPark" type="TrailerPark" x="213" y="118" level="0" width="4" height="13"/>
-  <object group="TrailerPark" type="TrailerPark" x="179" y="102" level="0" width="13" height="4"/>
-  <object group="TrailerPark" type="TrailerPark" x="179" y="116" level="0" width="13" height="4"/>
-  <object group="TrailerPark" type="TrailerPark" x="179" y="130" level="0" width="13" height="4"/>
-  <object group="TrailerPark" type="TrailerPark" x="179" y="144" level="0" width="13" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="249" y="221" level="0" width="45" height="4"/>
+<BMPToTMX>
+<tmxexportdir path="tmx"/>
+<rulesfile path=""/>
+<blendsfile path=""/>
+<mapbasefile path=""/>
+<assign-maps-to-world checked="false"/>
+<warn-unknown-colors checked="true"/>
+<compress checked="true"/>
+<copy-pixels checked="true"/>
+<update-existing checked="true"/>
+</BMPToTMX>
+<TMXToBMP>
+<mainImage generate="true"/>
+<vegetationImage generate="true"/>
+<buildingsImage path="" generate="false"/>
+</TMXToBMP>
+<GenerateLots>
+<exportdir path="lots"/>
+<ZombieSpawnMap path="Map_ZombieSpawnMap.png"/>
+<TileDefFolder path="D:/SteamLibrary/steamapps/common/ProjectZomboid/media"/>
+<worldOrigin origin="1,1"/>
+</GenerateLots>
+<LuaSettings>
+<spawnPointsFile path="spawnpoints.lua"/>
+<worldObjectsFile path="objects.lua"/>
+</LuaSettings>
+<propertyenum name="Direction" choices="N,S,W,E" multi="false"/>
+<propertyenum name="Pose" choices="pose01,pose02,pose03" multi="false"/>
+<propertyenum name="Skin" choices="White,Black" multi="false"/>
+<propertyenum name="Professions" choices="unemployed,chef,constructionworker,doctor,fireofficer,parkranger,policeofficer,repairman,securityguard" multi="false"/>
+<propertyenum name="RoomTone" choices="Generic,Barn,Mall,Warehouse,Prison,Church,Office,Factory" multi="false"/>
+<propertydef name="Direction" default="N" enum="Direction"/>
+<propertydef name="FaceDirection" default="true"/>
+<propertydef name="WaterDirection" default="0.0"/>
+<propertydef name="WaterSpeed" default="0.0"/>
+<propertydef name="WaterGround" default="false"/>
+<propertydef name="WaterShore" default="true"/>
+<propertydef name="Female" default="true"/>
+<propertydef name="Pose" default="pose01" enum="Pose"/>
+<propertydef name="Skin" default="White" enum="Skin"/>
+<propertydef name="Professions" default="all" enum="Professions"/>
+<propertydef name="Outfit" default=""/>
+<propertydef name="Script" default=""/>
+<propertydef name="RoomTone" default="Generic" enum="RoomTone"/>
+<propertydef name="EntireBuilding" default="false"/>
+<template name="ParkingStallN">
+<property name="Direction" value="N"/>
+</template>
+<template name="ParkingStallS">
+<property name="Direction" value="S"/>
+</template>
+<template name="ParkingStallW">
+<property name="Direction" value="W"/>
+</template>
+<template name="ParkingStallE">
+<property name="Direction" value="E"/>
+</template>
+<template name="WaterFlowN">
+<property name="WaterDirection" value="0"/>
+<property name="WaterSpeed" value="1.0"/>
+</template>
+<template name="WaterFlowS">
+<property name="WaterDirection" value="180"/>
+<property name="WaterSpeed" value="1.0"/>
+</template>
+<template name="WaterFlowE">
+<property name="WaterDirection" value="90"/>
+<property name="WaterSpeed" value="1.0"/>
+</template>
+<template name="WaterFlowW">
+<property name="WaterDirection" value="270"/>
+<property name="WaterSpeed" value="1.0"/>
+</template>
+<template name="WaterZone">
+<property name="WaterGround" value="false"/>
+<property name="WaterShore" value="true"/>
+</template>
+<template name="SpawnPoint">
+<description></description>
+<property name="Professions" value="all"/>
+</template>
+<template name="RoomTone">
+<property name="RoomTone" value="Generic"/>
+<property name="EntireBuilding" value="false"/>
+</template>
+<objecttype name="TownZone"/>
+<objecttype name="Forest"/>
+<objecttype name="DeepForest"/>
+<objecttype name="Nav"/>
+<objecttype name="Vegitation"/>
+<objecttype name="TrailerPark"/>
+<objecttype name="Farm"/>
+<objecttype name="ParkingStall"/>
+<objecttype name="FarmLand"/>
+<objecttype name="WaterFlow"/>
+<objecttype name="WaterZone"/>
+<objecttype name="Mannequin"/>
+<objecttype name="Ranch"/>
+<objecttype name="ZombiesType"/>
+<objecttype name="LootZone"/>
+<objecttype name="ZoneStory"/>
+<objecttype name="SpawnPoint"/>
+<objecttype name="RoomTone"/>
+<objectgroup name="ParkingStall" color="#ff007f" defaulttype="ParkingStall"/>
+<objectgroup name="TownZone" color="#aa0000" defaulttype="TownZone"/>
+<objectgroup name="Forest" color="#00aa00" defaulttype="Forest"/>
+<objectgroup name="Nav" color="#55aaff" defaulttype="Nav"/>
+<objectgroup name="DeepForest" color="#003500" defaulttype="DeepForest"/>
+<objectgroup name="Vegitation" color="#b3b300" defaulttype="Vegitation"/>
+<objectgroup name="TrailerPark" color="#f50000" defaulttype="TrailerPark"/>
+<objectgroup name="Farm" color="#55ff7f" defaulttype="Farm"/>
+<objectgroup name="FarmLand" color="#bcff7d" defaulttype="FarmLand"/>
+<objectgroup name="WaterFlow" color="#0000ff" defaulttype="WaterFlow"/>
+<objectgroup name="WaterZone" color="#0000ff" defaulttype="WaterZone"/>
+<objectgroup name="Mannequin" color="#0000ff" defaulttype="Mannequin"/>
+<objectgroup name="Ranch" color="#ff8000" defaulttype="Ranch"/>
+<objectgroup name="ZombiesType" color="#ffffff" defaulttype="ZombiesType"/>
+<objectgroup name="LootZone" color="#80ff80" defaulttype="LootZone"/>
+<objectgroup name="ZoneStory" color="#8080ff" defaulttype="ZoneStory"/>
+<objectgroup name="SpawnPoint" color="#101010" defaulttype="SpawnPoint"/>
+<objectgroup name="RoomTone" color="#0000ff" defaulttype="RoomTone"/>
+<cell x="0" y="0" map="tmx/1_1.tmx">
+  <object name="" group="Forest" type="Forest" x="0" y="270" level="0" width="300" height="30"/>
+  <object name="" group="Forest" type="Forest" x="0" y="219" level="0" width="86" height="29"/>
+  <object name="" group="Forest" type="Forest" x="0" y="0" level="0" width="89" height="219"/>
+  <object name="" group="Forest" type="Forest" x="89" y="0" level="0" width="9" height="79"/>
+  <object name="" group="Forest" type="Forest" x="98" y="0" level="0" width="186" height="25"/>
+  <object name="" group="Forest" type="Forest" x="284" y="0" level="0" width="16" height="17"/>
+  <object name="" group="Forest" type="Forest" x="192" y="235" level="0" width="2" height="5"/>
+  <object name="" group="Forest" type="Forest" x="190" y="231" level="0" width="2" height="9"/>
+  <object name="" group="Forest" type="Forest" x="188" y="228" level="0" width="2" height="12"/>
+  <object name="" group="Forest" type="Forest" x="144" y="216" level="0" width="44" height="26"/>
+  <object name="" group="Forest" type="Forest" x="91" y="216" level="0" width="35" height="27"/>
+  <object name="" group="Forest" type="Forest" x="91" y="184" level="0" width="4" height="32"/>
+  <object name="" group="Forest" type="Forest" x="118" y="182" level="0" width="6" height="3"/>
+  <object name="" group="Forest" type="Forest" x="91" y="180" level="0" width="27" height="4"/>
+  <object name="" group="Forest" type="Forest" x="92" y="152" level="0" width="10" height="28"/>
+  <object name="" group="Forest" type="Forest" x="102" y="178" level="0" width="7" height="2"/>
+  <object name="" group="Forest" type="Forest" x="102" y="176" level="0" width="2" height="2"/>
+  <object name="" group="Forest" type="Forest" x="102" y="170" level="0" width="3" height="3"/>
+  <object name="" group="Forest" type="Forest" x="110" y="173" level="0" width="4" height="4"/>
+  <object name="" group="Forest" type="Forest" x="102" y="153" level="0" width="5" height="6"/>
+  <object name="" group="Forest" type="Forest" x="107" y="154" level="0" width="4" height="6"/>
+  <object name="" group="Forest" type="Forest" x="111" y="155" level="0" width="3" height="4"/>
+  <object name="" group="Forest" type="Forest" x="114" y="156" level="0" width="5" height="4"/>
+  <object name="" group="Forest" type="Forest" x="119" y="157" level="0" width="1" height="3"/>
+  <object name="" group="Forest" type="Forest" x="94" y="137" level="0" width="2" height="15"/>
+  <object name="" group="Forest" type="Forest" x="96" y="147" level="0" width="2" height="5"/>
+  <object name="" group="Forest" type="Forest" x="98" y="149" level="0" width="2" height="3"/>
+  <object name="" group="Forest" type="Forest" x="91" y="120" level="0" width="5" height="2"/>
+  <object name="" group="Forest" type="Forest" x="93" y="115" level="0" width="3" height="5"/>
+  <object name="" group="Forest" type="Forest" x="92" y="81" level="0" width="4" height="34"/>
+  <object name="" group="Forest" type="Forest" x="91" y="81" level="0" width="1" height="22"/>
+  <object name="" group="Forest" type="Forest" x="168" y="28" level="0" width="2" height="18"/>
+  <object name="" group="Forest" type="Forest" x="170" y="171" level="0" width="7" height="25"/>
+  <object name="" group="Vegitation" type="Vegitation" x="102" y="160" level="0" width="2" height="5"/>
+  <object name="" group="Vegitation" type="Vegitation" x="108" y="172" level="0" width="5" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="109" y="173" level="0" width="1" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="114" y="175" level="0" width="1" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="120" y="155" level="0" width="7" height="4"/>
+  <object name="" group="Vegitation" type="Vegitation" x="111" y="153" level="0" width="3" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="109" y="153" level="0" width="2" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="109" y="151" level="0" width="4" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="167" y="96" level="0" width="4" height="47"/>
+  <object name="" group="Vegitation" type="Vegitation" x="171" y="95" level="0" width="4" height="6"/>
+  <object name="" group="Vegitation" type="Vegitation" x="175" y="95" level="0" width="3" height="4"/>
+  <object name="" group="Vegitation" type="Vegitation" x="172" y="154" level="0" width="7" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="172" y="145" level="0" width="2" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="204" y="135" level="0" width="53" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="255" y="114" level="0" width="2" height="21"/>
+  <object name="" group="Vegitation" type="Vegitation" x="213" y="114" level="0" width="3" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="178" y="95" level="0" width="20" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="244" y="30" level="0" width="4" height="15"/>
+  <object name="" group="Vegitation" type="Vegitation" x="249" y="28" level="0" width="5" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="241" y="28" level="0" width="4" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="243" y="30" level="0" width="1" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="259" y="28" level="0" width="13" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="285" y="28" level="0" width="15" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="299" y="31" level="0" width="1" height="10"/>
+  <object name="" group="Vegitation" type="Vegitation" x="296" y="232" level="0" width="5" height="11"/>
+  <object name="" group="Vegitation" type="Vegitation" x="298" y="229" level="0" width="3" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="163" y="190" level="0" width="7" height="6"/>
+  <object name="" group="Vegitation" type="Vegitation" x="173" y="161" level="0" width="5" height="10"/>
+  <object name="" group="Vegitation" type="Vegitation" x="178" y="160" level="0" width="19" height="6"/>
+  <object name="" group="Vegitation" type="Vegitation" x="284" y="17" level="0" width="16" height="3"/>
+  <object name="" group="TownZone" type="TownZone" x="284" y="64" level="0" width="14" height="17"/>
+  <object name="" group="TownZone" type="TownZone" x="250" y="33" level="0" width="48" height="13"/>
+  <object name="" group="TownZone" type="TownZone" x="219" y="56" level="0" width="56" height="26"/>
+  <object name="" group="TownZone" type="TownZone" x="174" y="32" level="0" width="65" height="13"/>
+  <object name="" group="TownZone" type="TownZone" x="200" y="64" level="0" width="16" height="16"/>
+  <object name="" group="TownZone" type="TownZone" x="169" y="57" level="0" width="31" height="23"/>
+  <object name="" group="TownZone" type="TownZone" x="203" y="92" level="0" width="56" height="15"/>
+  <object name="" group="TownZone" type="TownZone" x="228" y="151" level="0" width="31" height="15"/>
+  <object name="" group="TownZone" type="TownZone" x="244" y="167" level="0" width="15" height="31"/>
+  <object name="" group="TownZone" type="TownZone" x="227" y="167" level="0" width="15" height="31"/>
+  <object name="" group="TownZone" type="TownZone" x="210" y="167" level="0" width="15" height="31"/>
+  <object name="" group="TownZone" type="TownZone" x="228" y="227" level="0" width="66" height="18"/>
+  <object name="" group="TownZone" type="TownZone" x="228" y="224" level="0" width="9" height="3"/>
+  <object name="" group="TownZone" type="TownZone" x="141" y="179" level="0" width="25" height="9"/>
+  <object name="" group="TownZone" type="TownZone" x="141" y="161" level="0" width="17" height="18"/>
+  <object name="" group="TownZone" type="TownZone" x="158" y="161" level="0" width="3" height="6"/>
+  <object name="" group="TownZone" type="TownZone" x="133" y="243" level="0" width="2" height="4"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="242" y="118" level="0" width="4" height="13"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="227" y="118" level="0" width="4" height="13"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="213" y="118" level="0" width="4" height="13"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="179" y="102" level="0" width="13" height="4"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="179" y="116" level="0" width="13" height="4"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="179" y="130" level="0" width="13" height="4"/>
+  <object name="" group="TrailerPark" type="TrailerPark" x="179" y="144" level="0" width="13" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="249" y="221" level="0" width="45" height="4"/>
   <object name="sport" group="ParkingStall" type="ParkingStall" x="181" y="170" level="0" width="4" height="27"/>
   <object name="sport" group="ParkingStall" type="ParkingStall" x="193" y="188" level="0" width="4" height="9"/>
   <object name="sport" group="ParkingStall" type="ParkingStall" x="193" y="170" level="0" width="4" height="9"/>
-  <object group="ParkingStall" type="ParkingStall" x="161" y="56" level="0" width="4" height="24"/>
-  <object group="ParkingStall" type="ParkingStall" x="161" y="29" level="0" width="4" height="18"/>
-  <object group="ParkingStall" type="ParkingStall" x="149" y="38" level="0" width="4" height="33"/>
-  <object group="ParkingStall" type="ParkingStall" x="138" y="38" level="0" width="4" height="33"/>
-  <object group="ParkingStall" type="ParkingStall" x="126" y="38" level="0" width="4" height="33"/>
-  <object group="ParkingStall" type="ParkingStall" x="115" y="38" level="0" width="4" height="33"/>
-  <object group="ParkingStall" type="ParkingStall" x="103" y="29" level="0" width="4" height="51"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="161" y="56" level="0" width="4" height="24"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="161" y="29" level="0" width="4" height="18"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="149" y="38" level="0" width="4" height="33"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="138" y="38" level="0" width="4" height="33"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="126" y="38" level="0" width="4" height="33"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="115" y="38" level="0" width="4" height="33"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="103" y="29" level="0" width="4" height="51"/>
   <object name="burnt" group="ParkingStall" type="ParkingStall" x="109" y="123" level="0" width="4" height="3"/>
   <object name="burnt" group="ParkingStall" type="ParkingStall" x="108" y="138" level="0" width="3" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="165" y="157" level="0" width="3" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="165" y="151" level="0" width="3" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="165" y="157" level="0" width="3" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="165" y="151" level="0" width="3" height="4"/>
   <object name="trafficjame" group="ParkingStall" type="ParkingStall" x="144" y="130" level="0" width="20" height="3"/>
   <object name="trafficjamw" group="ParkingStall" type="ParkingStall" x="144" y="127" level="0" width="20" height="3"/>
   <object name="trafficjamw" group="ParkingStall" type="ParkingStall" x="132" y="255" level="0" width="16" height="3"/>
@@ -246,7 +246,7 @@
   <object name="burnt" group="ParkingStall" type="ParkingStall" x="13" y="259" level="0" width="4" height="3"/>
   <object name="ambulance" group="ParkingStall" type="ParkingStall" x="290" y="105" level="0" width="4" height="9"/>
   <object name="ambulance" group="ParkingStall" type="ParkingStall" x="290" y="98" level="0" width="4" height="3"/>
-  <object group="ParkingStall" type="ParkingStall" x="204" y="102" level="0" width="54" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="204" y="102" level="0" width="54" height="4"/>
   <object name="mccoy" group="ParkingStall" type="ParkingStall" x="148" y="182" level="0" width="4" height="3"/>
   <object name="junkyard" group="ParkingStall" type="ParkingStall" x="116" y="125" level="0" width="3" height="4"/>
   <object name="ConstructionSite" group="ZombiesType" type="ZombiesType" x="170" y="28" level="0" width="74" height="22"/>
@@ -271,183 +271,183 @@
   <object name="Studio" group="ZombiesType" type="ZombiesType" x="120" y="163" level="0" width="8" height="17"/>
   <object name="Studio" group="ZombiesType" type="ZombiesType" x="124" y="84" level="0" width="4" height="29"/>
   <object name="Police" group="ZombiesType" type="ZombiesType" x="129" y="242" level="0" width="10" height="6"/>
-  <object group="WaterZone" type="WaterZone" x="101" y="85" level="0" width="23" height="24"/>
-  <object group="WaterFlow" type="WaterFlow" x="113" y="168" level="0" width="1" height="1"/>
-  <object group="WaterFlow" type="WaterFlow" x="114" y="198" level="0" width="1" height="1"/>
-  <object group="WaterZone" type="WaterZone" x="111" y="196" level="0" width="5" height="4"/>
- </cell>
- <cell x="1" y="0" map="tmx/2_1.tmx">
-  <object group="Forest" type="Forest" x="220" y="0" level="0" width="80" height="248"/>
-  <object group="Forest" type="Forest" x="0" y="270" level="0" width="300" height="30"/>
-  <object group="Forest" type="Forest" x="201" y="22" level="0" width="1" height="6"/>
-  <object group="Forest" type="Forest" x="200" y="22" level="0" width="1" height="4"/>
-  <object group="Forest" type="Forest" x="199" y="22" level="0" width="1" height="3"/>
-  <object group="Forest" type="Forest" x="198" y="22" level="0" width="1" height="2"/>
-  <object group="Forest" type="Forest" x="197" y="22" level="0" width="1" height="1"/>
-  <object group="Forest" type="Forest" x="0" y="0" level="0" width="202" height="22"/>
-  <object group="Forest" type="Forest" x="116" y="30" level="0" width="11" height="15"/>
-  <object group="Forest" type="Forest" x="113" y="30" level="0" width="3" height="3"/>
-  <object group="Forest" type="Forest" x="127" y="34" level="0" width="18" height="11"/>
-  <object group="Forest" type="Forest" x="134" y="31" level="0" width="5" height="3"/>
-  <object group="Forest" type="Forest" x="145" y="28" level="0" width="49" height="9"/>
-  <object group="Forest" type="Forest" x="132" y="45" level="0" width="13" height="3"/>
-  <object group="Forest" type="Forest" x="138" y="48" level="0" width="7" height="3"/>
-  <object group="Forest" type="Forest" x="140" y="51" level="0" width="5" height="5"/>
-  <object group="Forest" type="Forest" x="143" y="56" level="0" width="2" height="3"/>
-  <object group="Forest" type="Forest" x="145" y="46" level="0" width="13" height="16"/>
-  <object group="Forest" type="Forest" x="145" y="44" level="0" width="2" height="2"/>
-  <object group="Forest" type="Forest" x="152" y="37" level="0" width="6" height="9"/>
-  <object group="Forest" type="Forest" x="158" y="37" level="0" width="36" height="5"/>
-  <object group="Forest" type="Forest" x="189" y="42" level="0" width="5" height="3"/>
-  <object group="Forest" type="Forest" x="192" y="45" level="0" width="2" height="18"/>
-  <object group="Forest" type="Forest" x="184" y="64" level="0" width="7" height="13"/>
-  <object group="Forest" type="Forest" x="190" y="77" level="0" width="2" height="7"/>
-  <object group="Forest" type="Forest" x="191" y="84" level="0" width="2" height="10"/>
-  <object group="Forest" type="Forest" x="187" y="95" level="0" width="4" height="6"/>
-  <object group="Forest" type="Forest" x="190" y="93" level="0" width="1" height="2"/>
-  <object group="Forest" type="Forest" x="192" y="107" level="0" width="2" height="4"/>
-  <object group="Forest" type="Forest" x="192" y="116" level="0" width="2" height="7"/>
-  <object group="Forest" type="Forest" x="182" y="116" level="0" width="4" height="6"/>
-  <object group="Forest" type="Forest" x="184" y="122" level="0" width="2" height="2"/>
-  <object group="Forest" type="Forest" x="168" y="78" level="0" width="12" height="3"/>
-  <object group="Forest" type="Forest" x="171" y="81" level="0" width="11" height="4"/>
-  <object group="Forest" type="Forest" x="174" y="85" level="0" width="4" height="2"/>
-  <object group="Forest" type="Forest" x="180" y="79" level="0" width="2" height="2"/>
-  <object group="Forest" type="Forest" x="173" y="73" level="0" width="5" height="5"/>
-  <object group="Forest" type="Forest" x="174" y="66" level="0" width="4" height="7"/>
-  <object group="Forest" type="Forest" x="158" y="42" level="0" width="19" height="2"/>
-  <object group="Forest" type="Forest" x="158" y="44" level="0" width="12" height="2"/>
-  <object group="Forest" type="Forest" x="158" y="46" level="0" width="9" height="3"/>
-  <object group="Forest" type="Forest" x="158" y="49" level="0" width="7" height="2"/>
-  <object group="Forest" type="Forest" x="114" y="58" level="0" width="20" height="10"/>
-  <object group="Forest" type="Forest" x="124" y="68" level="0" width="16" height="3"/>
-  <object group="Forest" type="Forest" x="128" y="71" level="0" width="12" height="2"/>
-  <object group="Forest" type="Forest" x="131" y="73" level="0" width="7" height="2"/>
-  <object group="Forest" type="Forest" x="134" y="63" level="0" width="4" height="5"/>
-  <object group="Forest" type="Forest" x="117" y="76" level="0" width="4" height="25"/>
-  <object group="Forest" type="Forest" x="121" y="87" level="0" width="16" height="16"/>
-  <object group="Forest" type="Forest" x="121" y="82" level="0" width="5" height="5"/>
-  <object group="Forest" type="Forest" x="126" y="85" level="0" width="2" height="2"/>
-  <object group="Forest" type="Forest" x="121" y="80" level="0" width="2" height="2"/>
-  <object group="Forest" type="Forest" x="112" y="88" level="0" width="5" height="13"/>
-  <object group="Forest" type="Forest" x="103" y="90" level="0" width="9" height="11"/>
-  <object group="Forest" type="Forest" x="137" y="87" level="0" width="2" height="3"/>
-  <object group="Forest" type="Forest" x="145" y="108" level="0" width="5" height="4"/>
-  <object group="Forest" type="Forest" x="148" y="112" level="0" width="4" height="18"/>
-  <object group="Forest" type="Forest" x="142" y="110" level="0" width="3" height="2"/>
-  <object group="Forest" type="Forest" x="159" y="104" level="0" width="8" height="24"/>
-  <object group="Forest" type="Forest" x="160" y="101" level="0" width="3" height="3"/>
-  <object group="Forest" type="Forest" x="155" y="91" level="0" width="4" height="2"/>
-  <object group="Forest" type="Forest" x="157" y="93" level="0" width="2" height="1"/>
-  <object group="Forest" type="Forest" x="161" y="128" level="0" width="6" height="2"/>
-  <object group="Forest" type="Forest" x="173" y="133" level="0" width="6" height="5"/>
-  <object group="Forest" type="Forest" x="182" y="156" level="0" width="10" height="3"/>
-  <object group="Forest" type="Forest" x="184" y="159" level="0" width="8" height="9"/>
-  <object group="Forest" type="Forest" x="182" y="165" level="0" width="2" height="5"/>
-  <object group="Forest" type="Forest" x="184" y="168" level="0" width="6" height="18"/>
-  <object group="Forest" type="Forest" x="187" y="186" level="0" width="6" height="9"/>
-  <object group="Forest" type="Forest" x="190" y="182" level="0" width="2" height="4"/>
-  <object group="Forest" type="Forest" x="188" y="195" level="0" width="4" height="15"/>
-  <object group="Forest" type="Forest" x="184" y="205" level="0" width="4" height="5"/>
-  <object group="Forest" type="Forest" x="183" y="210" level="0" width="8" height="32"/>
-  <object group="Forest" type="Forest" x="191" y="240" level="0" width="2" height="3"/>
-  <object group="Forest" type="Forest" x="132" y="210" level="0" width="51" height="32"/>
-  <object group="Forest" type="Forest" x="134" y="207" level="0" width="44" height="3"/>
-  <object group="Forest" type="Forest" x="136" y="205" level="0" width="41" height="2"/>
-  <object group="Forest" type="Forest" x="140" y="203" level="0" width="20" height="2"/>
-  <object group="Forest" type="Forest" x="140" y="201" level="0" width="13" height="2"/>
-  <object group="Forest" type="Forest" x="142" y="199" level="0" width="8" height="2"/>
-  <object group="Forest" type="Forest" x="145" y="195" level="0" width="2" height="4"/>
-  <object group="Forest" type="Forest" x="42" y="239" level="0" width="90" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="0" y="28" level="0" width="8" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="22" y="26" level="0" width="6" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="45" y="27" level="0" width="4" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="100" y="28" level="0" width="13" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="118" y="45" level="0" width="5" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="139" y="31" level="0" width="6" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="134" y="30" level="0" width="4" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="145" y="37" level="0" width="2" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="151" y="37" level="0" width="1" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="145" y="42" level="0" width="1" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="147" y="62" level="0" width="10" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="119" y="57" level="0" width="7" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="129" y="57" level="0" width="2" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="158" y="103" level="0" width="1" height="5"/>
-  <object group="Vegitation" type="Vegitation" x="159" y="103" level="0" width="1" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="160" y="98" level="0" width="1" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="182" y="82" level="0" width="1" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="167" y="104" level="0" width="3" height="4"/>
-  <object group="Vegitation" type="Vegitation" x="170" y="105" level="0" width="1" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="179" y="136" level="0" width="6" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="170" y="137" level="0" width="3" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="152" y="137" level="0" width="7" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="156" y="136" level="0" width="2" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="157" y="135" level="0" width="1" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="181" y="154" level="0" width="9" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="180" y="153" level="0" width="3" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="192" y="123" level="0" width="1" height="9"/>
-  <object group="Vegitation" type="Vegitation" x="192" y="111" level="0" width="1" height="5"/>
-  <object group="Vegitation" type="Vegitation" x="190" y="104" level="0" width="2" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="189" y="101" level="0" width="2" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="188" y="77" level="0" width="2" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="187" y="61" level="0" width="5" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="190" y="59" level="0" width="2" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="155" y="27" level="0" width="39" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="127" y="31" level="0" width="7" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="131" y="29" level="0" width="3" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="125" y="185" level="0" width="1" height="4"/>
-  <object group="Vegitation" type="Vegitation" x="126" y="185" level="0" width="1" height="3"/>
-  <object group="Vegitation" type="Vegitation" x="127" y="185" level="0" width="1" height="2"/>
-  <object group="Vegitation" type="Vegitation" x="128" y="185" level="0" width="1" height="1"/>
-  <object group="Vegitation" type="Vegitation" x="40" y="222" level="0" width="2" height="6"/>
-  <object group="TownZone" type="TownZone" x="155" y="155" level="0" width="21" height="19"/>
-  <object group="TownZone" type="TownZone" x="105" y="150" level="0" width="8" height="17"/>
-  <object group="TownZone" type="TownZone" x="97" y="161" level="0" width="7" height="7"/>
-  <object group="TownZone" type="TownZone" x="86" y="175" level="0" width="10" height="24"/>
-  <object group="TownZone" type="TownZone" x="40" y="183" level="0" width="35" height="16"/>
-  <object group="TownZone" type="TownZone" x="28" y="181" level="0" width="10" height="18"/>
-  <object group="TownZone" type="TownZone" x="28" y="150" level="0" width="19" height="31"/>
-  <object group="TownZone" type="TownZone" x="66" y="158" level="0" width="9" height="12"/>
-  <object group="TownZone" type="TownZone" x="57" y="150" level="0" width="10" height="20"/>
-  <object group="TownZone" type="TownZone" x="49" y="150" level="0" width="8" height="15"/>
-  <object group="TownZone" type="TownZone" x="28" y="115" level="0" width="42" height="8"/>
-  <object group="TownZone" type="TownZone" x="28" y="123" level="0" width="6" height="16"/>
-  <object group="TownZone" type="TownZone" x="41" y="84" level="0" width="16" height="10"/>
-  <object group="TownZone" type="TownZone" x="61" y="83" level="0" width="22" height="9"/>
-  <object group="TownZone" type="TownZone" x="72" y="71" level="0" width="13" height="10"/>
-  <object group="TownZone" type="TownZone" x="72" y="57" level="0" width="6" height="14"/>
-  <object group="TownZone" type="TownZone" x="28" y="55" level="0" width="42" height="27"/>
-  <object group="TownZone" type="TownZone" x="17" y="60" level="0" width="9" height="22"/>
-  <object group="TownZone" type="TownZone" x="17" y="56" level="0" width="2" height="4"/>
-  <object group="TownZone" type="TownZone" x="0" y="56" level="0" width="17" height="26"/>
-  <object group="TownZone" type="TownZone" x="3" y="33" level="0" width="17" height="14"/>
-  <object group="TownZone" type="TownZone" x="1" y="123" level="0" width="17" height="17"/>
-  <object group="TownZone" type="TownZone" x="1" y="151" level="0" width="16" height="47"/>
-  <object group="TownZone" type="TownZone" x="3" y="219" level="0" width="34" height="26"/>
-  <object group="TownZone" type="TownZone" x="121" y="156" level="0" width="11" height="8"/>
-  <object group="TownZone" type="TownZone" x="76" y="30" level="0" width="4" height="4"/>
-  <object group="TownZone" type="TownZone" x="40" y="30" level="0" width="4" height="4"/>
-  <object group="TownZone" type="TownZone" x="194" y="144" level="0" width="4" height="2"/>
+  <object name="" group="WaterZone" type="WaterZone" x="101" y="85" level="0" width="23" height="24"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="113" y="168" level="0" width="1" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="114" y="198" level="0" width="1" height="1"/>
+  <object name="" group="WaterZone" type="WaterZone" x="111" y="196" level="0" width="5" height="4"/>
+</cell>
+<cell x="1" y="0" map="tmx/2_1.tmx">
+  <object name="" group="Forest" type="Forest" x="220" y="0" level="0" width="80" height="248"/>
+  <object name="" group="Forest" type="Forest" x="0" y="270" level="0" width="300" height="30"/>
+  <object name="" group="Forest" type="Forest" x="201" y="22" level="0" width="1" height="6"/>
+  <object name="" group="Forest" type="Forest" x="200" y="22" level="0" width="1" height="4"/>
+  <object name="" group="Forest" type="Forest" x="199" y="22" level="0" width="1" height="3"/>
+  <object name="" group="Forest" type="Forest" x="198" y="22" level="0" width="1" height="2"/>
+  <object name="" group="Forest" type="Forest" x="197" y="22" level="0" width="1" height="1"/>
+  <object name="" group="Forest" type="Forest" x="0" y="0" level="0" width="202" height="22"/>
+  <object name="" group="Forest" type="Forest" x="116" y="30" level="0" width="11" height="15"/>
+  <object name="" group="Forest" type="Forest" x="113" y="30" level="0" width="3" height="3"/>
+  <object name="" group="Forest" type="Forest" x="127" y="34" level="0" width="18" height="11"/>
+  <object name="" group="Forest" type="Forest" x="134" y="31" level="0" width="5" height="3"/>
+  <object name="" group="Forest" type="Forest" x="145" y="28" level="0" width="49" height="9"/>
+  <object name="" group="Forest" type="Forest" x="132" y="45" level="0" width="13" height="3"/>
+  <object name="" group="Forest" type="Forest" x="138" y="48" level="0" width="7" height="3"/>
+  <object name="" group="Forest" type="Forest" x="140" y="51" level="0" width="5" height="5"/>
+  <object name="" group="Forest" type="Forest" x="143" y="56" level="0" width="2" height="3"/>
+  <object name="" group="Forest" type="Forest" x="145" y="46" level="0" width="13" height="16"/>
+  <object name="" group="Forest" type="Forest" x="145" y="44" level="0" width="2" height="2"/>
+  <object name="" group="Forest" type="Forest" x="152" y="37" level="0" width="6" height="9"/>
+  <object name="" group="Forest" type="Forest" x="158" y="37" level="0" width="36" height="5"/>
+  <object name="" group="Forest" type="Forest" x="189" y="42" level="0" width="5" height="3"/>
+  <object name="" group="Forest" type="Forest" x="192" y="45" level="0" width="2" height="18"/>
+  <object name="" group="Forest" type="Forest" x="184" y="64" level="0" width="7" height="13"/>
+  <object name="" group="Forest" type="Forest" x="190" y="77" level="0" width="2" height="7"/>
+  <object name="" group="Forest" type="Forest" x="191" y="84" level="0" width="2" height="10"/>
+  <object name="" group="Forest" type="Forest" x="187" y="95" level="0" width="4" height="6"/>
+  <object name="" group="Forest" type="Forest" x="190" y="93" level="0" width="1" height="2"/>
+  <object name="" group="Forest" type="Forest" x="192" y="107" level="0" width="2" height="4"/>
+  <object name="" group="Forest" type="Forest" x="192" y="116" level="0" width="2" height="7"/>
+  <object name="" group="Forest" type="Forest" x="182" y="116" level="0" width="4" height="6"/>
+  <object name="" group="Forest" type="Forest" x="184" y="122" level="0" width="2" height="2"/>
+  <object name="" group="Forest" type="Forest" x="168" y="78" level="0" width="12" height="3"/>
+  <object name="" group="Forest" type="Forest" x="171" y="81" level="0" width="11" height="4"/>
+  <object name="" group="Forest" type="Forest" x="174" y="85" level="0" width="4" height="2"/>
+  <object name="" group="Forest" type="Forest" x="180" y="79" level="0" width="2" height="2"/>
+  <object name="" group="Forest" type="Forest" x="173" y="73" level="0" width="5" height="5"/>
+  <object name="" group="Forest" type="Forest" x="174" y="66" level="0" width="4" height="7"/>
+  <object name="" group="Forest" type="Forest" x="158" y="42" level="0" width="19" height="2"/>
+  <object name="" group="Forest" type="Forest" x="158" y="44" level="0" width="12" height="2"/>
+  <object name="" group="Forest" type="Forest" x="158" y="46" level="0" width="9" height="3"/>
+  <object name="" group="Forest" type="Forest" x="158" y="49" level="0" width="7" height="2"/>
+  <object name="" group="Forest" type="Forest" x="114" y="58" level="0" width="20" height="10"/>
+  <object name="" group="Forest" type="Forest" x="124" y="68" level="0" width="16" height="3"/>
+  <object name="" group="Forest" type="Forest" x="128" y="71" level="0" width="12" height="2"/>
+  <object name="" group="Forest" type="Forest" x="131" y="73" level="0" width="7" height="2"/>
+  <object name="" group="Forest" type="Forest" x="134" y="63" level="0" width="4" height="5"/>
+  <object name="" group="Forest" type="Forest" x="117" y="76" level="0" width="4" height="25"/>
+  <object name="" group="Forest" type="Forest" x="121" y="87" level="0" width="16" height="16"/>
+  <object name="" group="Forest" type="Forest" x="121" y="82" level="0" width="5" height="5"/>
+  <object name="" group="Forest" type="Forest" x="126" y="85" level="0" width="2" height="2"/>
+  <object name="" group="Forest" type="Forest" x="121" y="80" level="0" width="2" height="2"/>
+  <object name="" group="Forest" type="Forest" x="112" y="88" level="0" width="5" height="13"/>
+  <object name="" group="Forest" type="Forest" x="103" y="90" level="0" width="9" height="11"/>
+  <object name="" group="Forest" type="Forest" x="137" y="87" level="0" width="2" height="3"/>
+  <object name="" group="Forest" type="Forest" x="145" y="108" level="0" width="5" height="4"/>
+  <object name="" group="Forest" type="Forest" x="148" y="112" level="0" width="4" height="18"/>
+  <object name="" group="Forest" type="Forest" x="142" y="110" level="0" width="3" height="2"/>
+  <object name="" group="Forest" type="Forest" x="159" y="104" level="0" width="8" height="24"/>
+  <object name="" group="Forest" type="Forest" x="160" y="101" level="0" width="3" height="3"/>
+  <object name="" group="Forest" type="Forest" x="155" y="91" level="0" width="4" height="2"/>
+  <object name="" group="Forest" type="Forest" x="157" y="93" level="0" width="2" height="1"/>
+  <object name="" group="Forest" type="Forest" x="161" y="128" level="0" width="6" height="2"/>
+  <object name="" group="Forest" type="Forest" x="173" y="133" level="0" width="6" height="5"/>
+  <object name="" group="Forest" type="Forest" x="182" y="156" level="0" width="10" height="3"/>
+  <object name="" group="Forest" type="Forest" x="184" y="159" level="0" width="8" height="9"/>
+  <object name="" group="Forest" type="Forest" x="182" y="165" level="0" width="2" height="5"/>
+  <object name="" group="Forest" type="Forest" x="184" y="168" level="0" width="6" height="18"/>
+  <object name="" group="Forest" type="Forest" x="187" y="186" level="0" width="6" height="9"/>
+  <object name="" group="Forest" type="Forest" x="190" y="182" level="0" width="2" height="4"/>
+  <object name="" group="Forest" type="Forest" x="188" y="195" level="0" width="4" height="15"/>
+  <object name="" group="Forest" type="Forest" x="184" y="205" level="0" width="4" height="5"/>
+  <object name="" group="Forest" type="Forest" x="183" y="210" level="0" width="8" height="32"/>
+  <object name="" group="Forest" type="Forest" x="191" y="240" level="0" width="2" height="3"/>
+  <object name="" group="Forest" type="Forest" x="132" y="210" level="0" width="51" height="32"/>
+  <object name="" group="Forest" type="Forest" x="134" y="207" level="0" width="44" height="3"/>
+  <object name="" group="Forest" type="Forest" x="136" y="205" level="0" width="41" height="2"/>
+  <object name="" group="Forest" type="Forest" x="140" y="203" level="0" width="20" height="2"/>
+  <object name="" group="Forest" type="Forest" x="140" y="201" level="0" width="13" height="2"/>
+  <object name="" group="Forest" type="Forest" x="142" y="199" level="0" width="8" height="2"/>
+  <object name="" group="Forest" type="Forest" x="145" y="195" level="0" width="2" height="4"/>
+  <object name="" group="Forest" type="Forest" x="42" y="239" level="0" width="90" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="0" y="28" level="0" width="8" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="22" y="26" level="0" width="6" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="45" y="27" level="0" width="4" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="100" y="28" level="0" width="13" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="118" y="45" level="0" width="5" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="139" y="31" level="0" width="6" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="134" y="30" level="0" width="4" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="145" y="37" level="0" width="2" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="151" y="37" level="0" width="1" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="145" y="42" level="0" width="1" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="147" y="62" level="0" width="10" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="119" y="57" level="0" width="7" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="129" y="57" level="0" width="2" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="158" y="103" level="0" width="1" height="5"/>
+  <object name="" group="Vegitation" type="Vegitation" x="159" y="103" level="0" width="1" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="160" y="98" level="0" width="1" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="182" y="82" level="0" width="1" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="167" y="104" level="0" width="3" height="4"/>
+  <object name="" group="Vegitation" type="Vegitation" x="170" y="105" level="0" width="1" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="179" y="136" level="0" width="6" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="170" y="137" level="0" width="3" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="152" y="137" level="0" width="7" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="156" y="136" level="0" width="2" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="157" y="135" level="0" width="1" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="181" y="154" level="0" width="9" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="180" y="153" level="0" width="3" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="192" y="123" level="0" width="1" height="9"/>
+  <object name="" group="Vegitation" type="Vegitation" x="192" y="111" level="0" width="1" height="5"/>
+  <object name="" group="Vegitation" type="Vegitation" x="190" y="104" level="0" width="2" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="189" y="101" level="0" width="2" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="188" y="77" level="0" width="2" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="187" y="61" level="0" width="5" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="190" y="59" level="0" width="2" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="155" y="27" level="0" width="39" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="127" y="31" level="0" width="7" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="131" y="29" level="0" width="3" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="125" y="185" level="0" width="1" height="4"/>
+  <object name="" group="Vegitation" type="Vegitation" x="126" y="185" level="0" width="1" height="3"/>
+  <object name="" group="Vegitation" type="Vegitation" x="127" y="185" level="0" width="1" height="2"/>
+  <object name="" group="Vegitation" type="Vegitation" x="128" y="185" level="0" width="1" height="1"/>
+  <object name="" group="Vegitation" type="Vegitation" x="40" y="222" level="0" width="2" height="6"/>
+  <object name="" group="TownZone" type="TownZone" x="155" y="155" level="0" width="21" height="19"/>
+  <object name="" group="TownZone" type="TownZone" x="105" y="150" level="0" width="8" height="17"/>
+  <object name="" group="TownZone" type="TownZone" x="97" y="161" level="0" width="7" height="7"/>
+  <object name="" group="TownZone" type="TownZone" x="86" y="175" level="0" width="10" height="24"/>
+  <object name="" group="TownZone" type="TownZone" x="40" y="183" level="0" width="35" height="16"/>
+  <object name="" group="TownZone" type="TownZone" x="28" y="181" level="0" width="10" height="18"/>
+  <object name="" group="TownZone" type="TownZone" x="28" y="150" level="0" width="19" height="31"/>
+  <object name="" group="TownZone" type="TownZone" x="66" y="158" level="0" width="9" height="12"/>
+  <object name="" group="TownZone" type="TownZone" x="57" y="150" level="0" width="10" height="20"/>
+  <object name="" group="TownZone" type="TownZone" x="49" y="150" level="0" width="8" height="15"/>
+  <object name="" group="TownZone" type="TownZone" x="28" y="115" level="0" width="42" height="8"/>
+  <object name="" group="TownZone" type="TownZone" x="28" y="123" level="0" width="6" height="16"/>
+  <object name="" group="TownZone" type="TownZone" x="41" y="84" level="0" width="16" height="10"/>
+  <object name="" group="TownZone" type="TownZone" x="61" y="83" level="0" width="22" height="9"/>
+  <object name="" group="TownZone" type="TownZone" x="72" y="71" level="0" width="13" height="10"/>
+  <object name="" group="TownZone" type="TownZone" x="72" y="57" level="0" width="6" height="14"/>
+  <object name="" group="TownZone" type="TownZone" x="28" y="55" level="0" width="42" height="27"/>
+  <object name="" group="TownZone" type="TownZone" x="17" y="60" level="0" width="9" height="22"/>
+  <object name="" group="TownZone" type="TownZone" x="17" y="56" level="0" width="2" height="4"/>
+  <object name="" group="TownZone" type="TownZone" x="0" y="56" level="0" width="17" height="26"/>
+  <object name="" group="TownZone" type="TownZone" x="3" y="33" level="0" width="17" height="14"/>
+  <object name="" group="TownZone" type="TownZone" x="1" y="123" level="0" width="17" height="17"/>
+  <object name="" group="TownZone" type="TownZone" x="1" y="151" level="0" width="16" height="47"/>
+  <object name="" group="TownZone" type="TownZone" x="3" y="219" level="0" width="34" height="26"/>
+  <object name="" group="TownZone" type="TownZone" x="121" y="156" level="0" width="11" height="8"/>
+  <object name="" group="TownZone" type="TownZone" x="76" y="30" level="0" width="4" height="4"/>
+  <object name="" group="TownZone" type="TownZone" x="40" y="30" level="0" width="4" height="4"/>
+  <object name="" group="TownZone" type="TownZone" x="194" y="144" level="0" width="4" height="2"/>
   <object name="fossoil" group="ParkingStall" type="ParkingStall" x="124" y="177" level="0" width="12" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="128" y="159" level="0" width="4" height="3"/>
-  <object group="ParkingStall" type="ParkingStall" x="86" y="134" level="0" width="51" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="86" y="116" level="0" width="39" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="118" y="169" level="0" width="4" height="18"/>
-  <object group="ParkingStall" type="ParkingStall" x="123" y="210" level="0" width="4" height="27"/>
-  <object group="ParkingStall" type="ParkingStall" x="111" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="105" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="95" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="89" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="79" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="73" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="63" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="57" y="216" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="45" y="210" level="0" width="4" height="27"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="128" y="159" level="0" width="4" height="3"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="86" y="134" level="0" width="51" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="86" y="116" level="0" width="39" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="118" y="169" level="0" width="4" height="18"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="123" y="210" level="0" width="4" height="27"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="111" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="105" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="95" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="89" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="79" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="73" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="63" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="57" y="216" level="0" width="4" height="15"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="45" y="210" level="0" width="4" height="27"/>
   <object name="radio" group="ParkingStall" type="ParkingStall" x="87" y="153" level="0" width="4" height="15"/>
-  <object group="ParkingStall" type="ParkingStall" x="37" y="134" level="0" width="27" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="63" y="98" level="0" width="21" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="37" y="134" level="0" width="27" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="63" y="98" level="0" width="21" height="4"/>
   <object name="spiffo" group="ParkingStall" type="ParkingStall" x="29" y="88" level="0" width="9" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="48" y="95" level="0" width="4" height="3"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="48" y="95" level="0" width="4" height="3"/>
   <object name="police" group="ParkingStall" type="ParkingStall" x="3" y="102" level="0" width="4" height="18"/>
   <object name="sport" group="ParkingStall" type="ParkingStall" x="26" y="35" level="0" width="3" height="4"/>
   <object name="trafficjame" group="ParkingStall" type="ParkingStall" x="203" y="147" level="0" width="4" height="3"/>
@@ -458,8 +458,8 @@
   <object name="burnt" group="ParkingStall" type="ParkingStall" x="215" y="259" level="0" width="4" height="3"/>
   <object name="mccoy" group="ParkingStall" type="ParkingStall" x="165" y="184" level="0" width="3" height="4"/>
   <object name="mccoy" group="ParkingStall" type="ParkingStall" x="171" y="184" level="0" width="6" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="51" y="184" level="0" width="24" height="4"/>
-  <object group="ParkingStall" type="ParkingStall" x="54" y="194" level="0" width="15" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="51" y="184" level="0" width="24" height="4"/>
+  <object name="" group="ParkingStall" type="ParkingStall" x="54" y="194" level="0" width="15" height="4"/>
   <object name="trafficjamn" group="ParkingStall" type="ParkingStall" x="80" y="171" level="0" width="3" height="4"/>
   <object name="mccoy" group="ParkingStall" type="ParkingStall" x="35" y="167" level="0" width="3" height="4"/>
   <object name="trafficjamw" group="ParkingStall" type="ParkingStall" x="45" y="126" level="0" width="4" height="3"/>
@@ -484,21 +484,21 @@
   <object name="Athletic" group="ZombiesType" type="ZombiesType" x="147" y="33" level="0" width="46" height="106"/>
   <object name="Athletic" group="ZombiesType" type="ZombiesType" x="99" y="31" level="0" width="48" height="83"/>
   <object name="Police" group="ZombiesType" type="ZombiesType" x="191" y="139" level="0" width="8" height="12"/>
-  <object group="WaterFlow" type="WaterFlow" x="170" y="94" level="0" width="1" height="1"/>
-  <object group="WaterFlow" type="WaterFlow" x="148" y="97" level="0" width="1" height="1"/>
-  <object group="WaterFlow" type="WaterFlow" x="41" y="40" level="0" width="1" height="1"/>
-  <object group="WaterFlow" type="WaterFlow" x="77" y="40" level="0" width="1" height="1"/>
-  <object group="WaterZone" type="WaterZone" x="35" y="38" level="0" width="13" height="4"/>
-  <object group="WaterZone" type="WaterZone" x="71" y="38" level="0" width="13" height="4"/>
-  <object group="WaterZone" type="WaterZone" x="56" y="60" level="0" width="9" height="13"/>
-  <object group="WaterZone" type="WaterZone" x="58" y="74" level="0" width="4" height="4"/>
-  <object group="WaterZone" type="WaterZone" x="53" y="74" level="0" width="4" height="4"/>
-  <object group="WaterFlow" type="WaterFlow" x="60" y="76" level="0" width="1" height="1"/>
-  <object group="WaterFlow" type="WaterFlow" x="55" y="76" level="0" width="1" height="1"/>
-  <object group="WaterFlow" type="WaterFlow" x="60" y="66" level="0" width="1" height="1"/>
-  <object group="WaterZone" type="WaterZone" x="144" y="79" level="0" width="3" height="2"/>
-  <object group="WaterZone" type="WaterZone" x="145" y="76" level="0" width="2" height="3"/>
-  <object group="WaterZone" type="WaterZone" x="145" y="81" level="0" width="1" height="1"/>
-  <object group="WaterZone" type="WaterZone" x="145" y="75" level="0" width="2" height="1"/>
- </cell>
+  <object name="" group="WaterFlow" type="WaterFlow" x="170" y="94" level="0" width="1" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="148" y="97" level="0" width="1" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="41" y="40" level="0" width="1" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="77" y="40" level="0" width="1" height="1"/>
+  <object name="" group="WaterZone" type="WaterZone" x="35" y="38" level="0" width="13" height="4"/>
+  <object name="" group="WaterZone" type="WaterZone" x="71" y="38" level="0" width="13" height="4"/>
+  <object name="" group="WaterZone" type="WaterZone" x="56" y="60" level="0" width="9" height="13"/>
+  <object name="" group="WaterZone" type="WaterZone" x="58" y="74" level="0" width="4" height="4"/>
+  <object name="" group="WaterZone" type="WaterZone" x="53" y="74" level="0" width="4" height="4"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="60" y="76" level="0" width="1" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="55" y="76" level="0" width="1" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="60" y="66" level="0" width="1" height="1"/>
+  <object name="" group="WaterZone" type="WaterZone" x="144" y="79" level="0" width="3" height="2"/>
+  <object name="" group="WaterZone" type="WaterZone" x="145" y="76" level="0" width="2" height="3"/>
+  <object name="" group="WaterZone" type="WaterZone" x="145" y="81" level="0" width="1" height="1"/>
+  <object name="" group="WaterZone" type="WaterZone" x="145" y="75" level="0" width="2" height="1"/>
+</cell>
 </world>
