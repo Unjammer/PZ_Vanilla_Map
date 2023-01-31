@@ -1,3 +1,0 @@
-function SpawnPoints()
-return {}
-end
