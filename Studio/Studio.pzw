@@ -26,6 +26,7 @@
 <spawnPointsFile path="spawnpoints.lua"/>
 <worldObjectsFile path="objects.lua"/>
 </LuaSettings>
+<otherworld path=""/>
 <propertyenum name="Direction" choices="N,S,W,E" multi="false"/>
 <propertyenum name="Pose" choices="pose01,pose02,pose03" multi="false"/>
 <propertyenum name="Skin" choices="White,Black" multi="false"/>
@@ -271,10 +272,22 @@
   <object name="Studio" group="ZombiesType" type="ZombiesType" x="120" y="163" level="0" width="8" height="17"/>
   <object name="Studio" group="ZombiesType" type="ZombiesType" x="124" y="84" level="0" width="4" height="29"/>
   <object name="Police" group="ZombiesType" type="ZombiesType" x="129" y="242" level="0" width="10" height="6"/>
-  <object name="" group="WaterZone" type="WaterZone" x="101" y="85" level="0" width="23" height="24"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="113" y="168" level="0" width="1" height="1"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="114" y="198" level="0" width="1" height="1"/>
-  <object name="" group="WaterZone" type="WaterZone" x="111" y="196" level="0" width="5" height="4"/>
+  <object name="" group="WaterZone" type="WaterZone" x="101" y="85" level="0" width="23" height="24">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="113" y="168" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="114" y="198" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="111" y="196" level="0" width="5" height="4">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
 </cell>
 <cell x="1" y="0" map="tmx/2_1.tmx">
   <object name="" group="Forest" type="Forest" x="220" y="0" level="0" width="80" height="248"/>
@@ -484,21 +497,69 @@
   <object name="Athletic" group="ZombiesType" type="ZombiesType" x="147" y="33" level="0" width="46" height="106"/>
   <object name="Athletic" group="ZombiesType" type="ZombiesType" x="99" y="31" level="0" width="48" height="83"/>
   <object name="Police" group="ZombiesType" type="ZombiesType" x="191" y="139" level="0" width="8" height="12"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="170" y="94" level="0" width="1" height="1"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="148" y="97" level="0" width="1" height="1"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="41" y="40" level="0" width="1" height="1"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="77" y="40" level="0" width="1" height="1"/>
-  <object name="" group="WaterZone" type="WaterZone" x="35" y="38" level="0" width="13" height="4"/>
-  <object name="" group="WaterZone" type="WaterZone" x="71" y="38" level="0" width="13" height="4"/>
-  <object name="" group="WaterZone" type="WaterZone" x="56" y="60" level="0" width="9" height="13"/>
-  <object name="" group="WaterZone" type="WaterZone" x="58" y="74" level="0" width="4" height="4"/>
-  <object name="" group="WaterZone" type="WaterZone" x="53" y="74" level="0" width="4" height="4"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="60" y="76" level="0" width="1" height="1"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="55" y="76" level="0" width="1" height="1"/>
-  <object name="" group="WaterFlow" type="WaterFlow" x="60" y="66" level="0" width="1" height="1"/>
-  <object name="" group="WaterZone" type="WaterZone" x="144" y="79" level="0" width="3" height="2"/>
-  <object name="" group="WaterZone" type="WaterZone" x="145" y="76" level="0" width="2" height="3"/>
-  <object name="" group="WaterZone" type="WaterZone" x="145" y="81" level="0" width="1" height="1"/>
-  <object name="" group="WaterZone" type="WaterZone" x="145" y="75" level="0" width="2" height="1"/>
+  <object name="" group="WaterFlow" type="WaterFlow" x="170" y="94" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="148" y="97" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="41" y="40" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="77" y="40" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="35" y="38" level="0" width="13" height="4">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="71" y="38" level="0" width="13" height="4">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="56" y="60" level="0" width="9" height="13">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="58" y="74" level="0" width="4" height="4">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="53" y="74" level="0" width="4" height="4">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="60" y="76" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="55" y="76" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterFlow" type="WaterFlow" x="60" y="66" level="0" width="1" height="1">
+   <property name="WaterDirection" value="0.0"/>
+   <property name="WaterSpeed" value="0.0"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="144" y="79" level="0" width="3" height="2">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="145" y="76" level="0" width="2" height="3">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="145" y="81" level="0" width="1" height="1">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
+  <object name="" group="WaterZone" type="WaterZone" x="145" y="75" level="0" width="2" height="1">
+   <property name="WaterShore" value="false"/>
+   <property name="WaterGround" value="false"/>
+  </object>
 </cell>
 </world>
